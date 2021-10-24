@@ -1,8 +1,10 @@
 <?php
 $var = 5;
 $i = 0;
+$istr= "";
 while (++$i<=$var){
-	echo $i . ' ';
+	$istr= $i . " " . $istr;
 }
+echo $istr;
 ?>
 	
