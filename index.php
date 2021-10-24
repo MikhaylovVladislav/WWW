@@ -12,4 +12,6 @@ echo($d);
          <il> <a href="lab-1-2.php"> Упражнение 1-3 (файл: lab-1-2.php)</a> </il>
          <br>
          <il> <a href="lab-1-3.php"> Упражнение 1-4 (файл: lab-1-3.php)</a> </il>
+		 <br>
+         <il> <a href="lab1-5.php"> Задача 1-1 (файл: lab1-5.php)</a> </il>
      </ul>
