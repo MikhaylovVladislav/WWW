@@ -2,9 +2,11 @@
 $var = 5;
 $i = 0;
 $istr= "";
+$istr2= "";
 while (++$i<=$var){
-	$istr= $i . " " . $istr;
+	$istr=  $istr . " " . $i;
+	$istr2= $i . " " . $istr2;
 }
-echo $istr;
+echo $istr . "<br>" . $istr2;
 ?>
 	
