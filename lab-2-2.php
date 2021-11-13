@@ -17,6 +17,7 @@ for($i=1;$i<=$ra;$i++){
 	$rb=rand(10, 99);
 $arrAB[$i]=$rb;
 }
+sort($arrAB);
 $arrABstr=implode(" ",$arrAB);
  echo 'Массив из '."$ra".' элементов, заполненный случайными числами: '."$arrABstr"; 
 
