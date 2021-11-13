@@ -26,7 +26,7 @@ for ($n=1;$n<=10;$n++){
 	$kvd[$n]=($n*$n); //Массив с 1
 	echo "$kvd[$n]" . " ";
 }
-echo '<br> ' . 'Объедененный массив $treug + $kvd: ';
+echo '<br> ' . 'Объедененный массив $rez ($treug + $kvd): ';
 
 for ($n=1;$n<=10;$n++){
 	$rez[$n]=$treug[$n];
