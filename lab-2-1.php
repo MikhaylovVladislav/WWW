@@ -45,5 +45,11 @@ unset($rez[1]);
 for ($n=1;$n<=count($rez);$n++){
 echo "$rez[$n]" . " ";
 }
+echo '<br> ' . 'Массив $rez1 без повторяющихся чисел в массиве $rez: ';//пункт 6
+
+$rez1=array_unique($rez);
+ for ($n=1;$n<=count($rez1);$n++){
+echo "$rez1[$n]" . " ";
+}
 ?>
 	
