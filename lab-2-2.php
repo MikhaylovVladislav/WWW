@@ -18,7 +18,8 @@ for($i=1;$i<=$ra;$i++){
 $arrAB[$i]=$rb;
 }
 sort($arrAB);
-$arrABstr=implode(" ",$arrAB);
+$arrBA=array_reverse($arrAB);
+$arrABstr=implode(" ",$arrBA);
  echo 'Массив из '."$ra".' элементов, заполненный случайными числами: '."$arrABstr"; 
 
 ?>
