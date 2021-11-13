@@ -35,5 +35,11 @@ for ($n=1;$n<=10;$n++){
 for ($n=1;$n<=20;$n++){
 echo "$rez[$n]" . " ";
 }
+echo '<br> ' . 'Отсортированнай массив $rez: ';
+asort($rez);
+
+for ($n=1;$n<=count($rez);$n++){
+echo "$rez[$n]" . " ";
+}
 ?>
 	
