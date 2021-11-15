@@ -34,5 +34,11 @@ $arrA=$arrA_B;
 array_pop($arrA);
 $arrABstr=implode(" ",$arrA);
 echo '<br>' . 'Первоначальный массив без последнего элемента: '."$arrABstr"; 
+
+foreach ($arrA_B as $value){
+$arrSum+=$value;
+}
+$KolInArr=count($arrA_B);
+echo '<br>' . 'Сумма элементов первоначального массива = '."$arrSum".', а количество элементов в массиве = '."$KolInArr"; 
 ?>
 
