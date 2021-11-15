@@ -22,5 +22,12 @@ $cust['snum']="1001";
 foreach($cust as $key => $key_value) {
   echo "Ключ = " . $key . ", Значение = " . $key_value .  '<br>';
 }
+
+echo '<br>';
+
+$cust['rating']="100";
+foreach($cust as $key => $key_value) {
+  echo "Ключ = " . $key . ", Значение = " . $key_value .  '<br>';
+}
 ?>
 	
