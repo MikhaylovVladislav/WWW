@@ -40,3 +40,19 @@ echo($d);
 		 <br>
          <il> <a href="lab-2-11.php"> Задача 1-3 (5 вариант) (файл: lab-2-11.php)</a> </il>
      </ul>
+	  <p> Ссылки на cтраницы (2 л.р.):
+ 
+     <ul class = "menu">
+         <il> <a href="lab-2-1.php"> Задание 2-1 (файл: lab-2-1.php)</a> </il>
+		 <br>
+         <il> <a href="lab-2-2.php"> Задание 2-2 (файл: lab-2-2.php)</a> </il>
+		 <br>
+         <il> <a href="lab-2-3.php"> задание 2-3 (файл: lab-2-3.php)</a> </il>
+		 <br>
+         <il> <a href="lab2-2-4.php"> Задача 2.4 (файл: lab2-2-4.php)</a> </il>
+		 <br>
+		 <il> <a href="lab2-2-5.php"> Задача 2.5 (файл: lab2-2-5.php)</a> </il>
+		 <br>
+		 <il> <a href="lab2-2-6.php"> Задача 2.6 (файл: lab2-2-6.php)</a> </il>
+		 <br>
+	 </ul>
