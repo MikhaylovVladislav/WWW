@@ -40,5 +40,8 @@ $arrSum+=$value;
 }
 $KolInArr=count($arrA_B);
 echo '<br>' . 'Сумма элементов первоначального массива = '."$arrSum".', а количество элементов в массиве = '."$KolInArr"; 
+
+$SrArifArr=$arrSum/$KolInArr;
+echo '<br>' . 'Среднее арифиметическое первоначального массива: '."$SrArifArr"; 
 ?>
 
