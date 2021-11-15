@@ -15,12 +15,24 @@ $ra=rand(3, 20);
 
 for($i=1;$i<=$ra;$i++){
 	$rb=rand(10, 99);
-$arrAB[$i]=$rb;
+$arrA_B[$i]=$rb;
 }
+
+$arrABstr=implode(" ",$arrA_B);
+echo 'Массив из '."$ra".' элементов, заполненный случайными числами: '."$arrABstr"; 
+
+$arrAB=$arrA_B;
 sort($arrAB);
+$arrABstr=implode(" ",$arrAB);
+echo '<br>' . 'Отсортированнай массив (по возрастанию): '."$arrABstr"; 
+
 $arrBA=array_reverse($arrAB);
 $arrABstr=implode(" ",$arrBA);
- echo 'Массив из '."$ra".' элементов, заполненный случайными числами: '."$arrABstr"; 
+echo '<br>' . 'Отсортированнай массив (по убыванию): '."$arrABstr"; 
 
+$arrA=$arrA_B;
+array_pop($arrA);
+$arrABstr=implode(" ",$arrA);
+echo '<br>' . 'Первоначальный массив без последнего элемента: '."$arrABstr"; 
 ?>
 
