@@ -2,8 +2,9 @@
 <HEAD> <TITLE> Угадай число </TITLE> </HEAD>
 <BODY>
 <FORM method="post" action="<?php print $PHP_SELF ?>">
- Введите число от 1 до 10:
+ Введите числа
  <INPUT type="text" name="a" id="a" size="3">
+  <INPUT type="text" name="b" id="b" size="3">
  <INPUT type="hidden" name="h"  id="h" value="5"> // угадываемое число
  <P> <INPUT type="submit" name="obr" value="Проверить">
 </FORM>
