@@ -21,7 +21,7 @@
 
 <?php
 if (is_numeric($_POST["n"])) {
-}
+
 echo "Обработка числа ". $_POST["n"] . "<br>";
 
 switch ($_POST["z"]) {
@@ -88,5 +88,6 @@ for ($i=1;$i<$_POST["n"]+1;$i++){
  break;
 }
 echo $s;
+}
 ?>
 </BODY> </HTML>
