@@ -56,3 +56,34 @@ echo($d);
 		 <il> <a href="lab2-2-6.php"> Задача 2.6 (файл: lab2-2-6.php)</a> </il>
 		 <br>
 	 </ul>
+	 
+	 <p> Ссылки на cтраницы (3 л.р.):
+ 
+     <ul class = "menu">
+         <il> <a href="f1.html"> Упражнение 3-1 </a> </il>
+		 <br>
+         <il> <a href="f2.html"> Упражнение 3-2 </a> </il>
+		 <br>
+		 <il> <a href="f3.html"> Упражнение 3-3 </a> </il>
+		 <br>
+		 <il> <a href="f4.html"> Упражнение 3-4 </a> </il>
+		 <br>
+		 <il> <a href="f5.html"> Упражнение 3-5 </a> </il>
+		 <br>
+		 <il> <a href="f6.html"> Упражнение 3-6 </a> </il>
+		 <br>
+		 <il> <a href="f7.php"> Упражнение 3-7 </a> </il>
+		 <br>
+		  <il> <a href="s3-1.html"> Задача 3-1 </a> </il>
+		 <br>
+		 <il> <a href="s3-2.php"> Задача 3-2 </a> </il>
+		 <br>
+		 <il> <a href="s3-3.php"> Задача 3-3 </a> </il>
+		 <br>
+		 <il> <a href="s3-4.php"> Задача 3-4 </a> </il>
+		 <br>
+		 <il> <a href="s3-5.php"> Задача 3-5 </a> </il>
+		 <br>
+		 <il> <a href="s3-6.html"> Задача 3-6 </a> </il>
+		 <br>
+	 </ul>
