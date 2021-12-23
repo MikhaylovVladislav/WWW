@@ -21,17 +21,26 @@ legend {
 <legend> Студенты </legend>
 <table border="1">
 <tr> 
- <th> ФИО </th> <th> Факультет </th> <th> Группа </th> <th> Номер зачетной книжки </th> <th> Номер телефона </th>
+ <th> ФИО!@! </th> <th> Факультет </th> <th> Группа </th> <th> Номер зачетной книжки </th> <th> Номер телефона </th>
  <th> Редактировать </th> <th> Уничтожить </th> </tr>
 
 <?php
 
+define ("HOST", "localhost");
+define ("USER", "f0593353_root");
+define ("PASS", "12345");
+define ("DB", "f0593353_students");
+ 
+ $linkmy = @mysqli_connect(HOST, USER, PASS, DB) or die ('Не получилось из-за @mysqli_connect :(');
+
+
+
 $filed="datareg.txt";
- $linkmy=mysqli_connect("localhost", "root") or die ("Невозможно
-подключиться к серверу"); // установление соединения с сервером
+// $linkmy=mysqli_connect("f0593353_root", "12345") or die ("Невозможно подключиться к серверу"); // установление соединения с сервером
+
  mysqli_query($linkmy, 'SET NAMES utf8'); // тип кодировки
  // подключение к базе данных:
- mysqli_select_db($linkmy, "students") or die("Нет такой таблицы!");
+ mysqli_select_db($linkmy, "f0593353_students") or die("Нет такой таблицы!");
  $result=mysqli_query($linkmy, "SELECT id_stud, stud_fio, stud_faculty, stud_gr, stud_no_zk, stud_no_tel
 FROM stud"); // запрос на выборку сведений о пользователях
 while ($row=mysqli_fetch_array($result)){// для каждой строки из запроса
@@ -73,11 +82,10 @@ print("<P>Всего студентов: $num_rows </p>");
 
 <?php
 
- $linkmy=mysqli_connect("localhost", "root") or die ("Невозможно
-подключиться к серверу"); // установление соединения с сервером
+
  mysqli_query($linkmy, 'SET NAMES utf8'); // тип кодировки
  // подключение к базе данных:
- mysqli_select_db($linkmy, "students") or die("Нет такой таблицы!");
+ mysqli_select_db($linkmy, "f0593353_students") or die("Нет такой таблицы!");
  $result=mysqli_query($linkmy, "SELECT id_subj, subj_name ,subj_fio_prepod
 FROM subject"); // запрос на выборку сведений о пользователях
 while ($row=mysqli_fetch_array($result)){// для каждой строки из запроса
@@ -117,11 +125,10 @@ print("<P>Всего предметов: $num_rows </p>");
 
 <?php
 
- $linkmy=mysqli_connect("localhost", "root") or die ("Невозможно
-подключиться к серверу"); // установление соединения с сервером
+
  mysqli_query($linkmy, 'SET NAMES utf8'); // тип кодировки
  // подключение к базе данных:
- mysqli_select_db($linkmy, "students") or die("Нет такой таблицы!");
+ mysqli_select_db($linkmy, "f0593353_students") or die("Нет такой таблицы!");
  $result=mysqli_query($linkmy, "SELECT id_zachved, zv_data ,id_stud, id_subj, zv_grade, zv_npp
 FROM zachved"); // запрос на выборку сведений о пользователях
 while ($row=mysqli_fetch_array($result)){// для каждой строки из запроса

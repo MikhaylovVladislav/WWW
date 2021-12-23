@@ -57,9 +57,17 @@ $objPHPExcel->getProperties()->setCreator("Maarten Balliauw")
 							 ->setCategory("Test result file");
 
 
+define ("HOST", "localhost");
+define ("USER", "f0593353_root");
+define ("PASS", "12345");
+define ("DB", "f0593353_students");
+ 
+ $linkmy = @mysqli_connect(HOST, USER, PASS, DB) or die ('Не получилось из-за @mysqli_connect :(');
+
+
+
 // students
-$linkmy=mysqli_connect("localhost", "root") or die ("Невозможно
-подключиться к серверу"); // установление соединения с сервером
+
  mysqli_query($linkmy, 'SET NAMES utf8'); // тип кодировки
  // подключение к базе данных:
  mysqli_select_db($linkmy, "students") or die("Нет такой таблицы!");
@@ -80,8 +88,6 @@ while ($row=mysqli_fetch_array($result)){// для каждой строки и�
 
 }
 // subject 
- $linkmy=mysqli_connect("localhost", "root") or die ("Невозможно
-подключиться к серверу"); // установление соединения с сервером
  mysqli_query($linkmy, 'SET NAMES utf8'); // тип кодировки
  // подключение к базе данных:
  mysqli_select_db($linkmy, "students") or die("Нет такой таблицы!");
@@ -96,8 +102,6 @@ while ($row=mysqli_fetch_array($result)){// для каждой строки и�
 }
 
 // zachetnaya vedomost'
-$linkmy=mysqli_connect("localhost", "root") or die ("Невозможно
-подключиться к серверу"); // установление соединения с сервером
  mysqli_query($linkmy, 'SET NAMES utf8'); // тип кодировки
  // подключение к базе данных:
  mysqli_select_db($linkmy, "students") or die("Нет такой таблицы!");

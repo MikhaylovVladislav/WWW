@@ -87,3 +87,13 @@ echo($d);
 		 <il> <a href="s3-6.html"> Задача 3-6 </a> </il>
 		 <br>
 	 </ul>
+	 
+	  <p> Ссылки на cтраницы (4 л.р.):
+ 
+     <ul class = "menu">
+         <il> <a href="bd_user/index.php"> Упражнение (bd_user) </a> </il>
+		 <br>
+		 <il> <a href="bd_student/index.php"> Задача по 1 варианту (bd_student)  </a> </il>
+		 <br>
+         
+	 </ul>
