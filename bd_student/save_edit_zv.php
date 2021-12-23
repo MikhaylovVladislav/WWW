@@ -7,7 +7,7 @@ define ("DB", "f0593353_students");
  
  $linkmy = @mysqli_connect(HOST, USER, PASS, DB) or die ('Не получилось из-за @mysqli_connect :(');
  mysqli_query($linkmy, 'SET NAMES utf8');
- mysqli_select_db($linkmy, "students") or die("Нет такой таблицы!");
+ mysqli_select_db($linkmy, "f0593353_students") or die("Нет такой таблицы!");
  $zapros="UPDATE zachved SET zv_data='".$_GET['data'].
 "', id_stud='".$_GET['stud']."', id_subj='"
 .$_GET['subj']."', zv_grade='".$_GET['grade'].

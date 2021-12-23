@@ -70,7 +70,7 @@ define ("DB", "f0593353_students");
 
  mysqli_query($linkmy, 'SET NAMES utf8'); // тип кодировки
  // подключение к базе данных:
- mysqli_select_db($linkmy, "students") or die("Нет такой таблицы!");
+ mysqli_select_db($linkmy, "f0593353_students") or die("Нет такой таблицы!");
  $result=mysqli_query($linkmy, "SELECT id_stud, stud_fio, stud_faculty, stud_gr, stud_no_zk, stud_no_tel
 FROM stud"); // запрос на выборку сведений о пользователях
 while ($row=mysqli_fetch_array($result)){// для каждой строки из запроса
@@ -90,7 +90,7 @@ while ($row=mysqli_fetch_array($result)){// для каждой строки и�
 // subject 
  mysqli_query($linkmy, 'SET NAMES utf8'); // тип кодировки
  // подключение к базе данных:
- mysqli_select_db($linkmy, "students") or die("Нет такой таблицы!");
+ mysqli_select_db($linkmy, "f0593353_students") or die("Нет такой таблицы!");
  $result=mysqli_query($linkmy, "SELECT id_subj, subj_name ,subj_fio_prepod
 FROM subject"); // запрос на выборку сведений о пользователях
 while ($row=mysqli_fetch_array($result)){// для каждой строки из запроса
@@ -104,7 +104,7 @@ while ($row=mysqli_fetch_array($result)){// для каждой строки и�
 // zachetnaya vedomost'
  mysqli_query($linkmy, 'SET NAMES utf8'); // тип кодировки
  // подключение к базе данных:
- mysqli_select_db($linkmy, "students") or die("Нет такой таблицы!");
+ mysqli_select_db($linkmy, "f0593353_students") or die("Нет такой таблицы!");
  $result=mysqli_query($linkmy, "SELECT id_zachved, zv_data ,id_stud, id_subj, zv_grade, zv_npp
 FROM zachved"); // запрос на выборку сведений о пользователях
 
