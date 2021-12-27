@@ -21,7 +21,7 @@ legend {
 <legend> Студенты </legend>
 <table border="1">
 <tr> 
- <th> ФИО!@! </th> <th> Факультет </th> <th> Группа </th> <th> Номер зачетной книжки </th> <th> Номер телефона </th>
+  <th> id </th><th> ФИО!@! </th> <th> Факультет </th> <th> Группа </th> <th> Номер зачетной книжки </th> <th> Номер телефона </th>
  <th> Редактировать </th> <th> Уничтожить </th> </tr>
 
 <?php
@@ -45,7 +45,7 @@ $filed="datareg.txt";
 FROM stud"); // запрос на выборку сведений о пользователях
 while ($row=mysqli_fetch_array($result)){// для каждой строки из запроса
  echo "<tr>";
-
+ echo "<td>" . $row['id_stud'] . "</td>";
  echo "<td>" . $row['stud_fio'] . "</td>";
   echo "<td>" . $row['stud_faculty'] . "</td>";
  echo "<td>" . $row['stud_gr'] . "</td>";
@@ -77,7 +77,7 @@ print("<P>Всего студентов: $num_rows </p>");
 <legend> Предметы </legend>
 <table border="1">
 <tr> 
- <th> Название </th> <th> ФИО препода </th> 
+ <th> id </th> <th> Название </th> <th> ФИО препода </th> 
  <th> Редактировать </th> <th> Уничтожить </th> </tr>
 
 <?php
@@ -90,7 +90,7 @@ print("<P>Всего студентов: $num_rows </p>");
 FROM subject"); // запрос на выборку сведений о пользователях
 while ($row=mysqli_fetch_array($result)){// для каждой строки из запроса
  echo "<tr>";
-
+echo "<td>" . $row['id_subj'] . "</td>";
  echo "<td>" . $row['subj_name'] . "</td>";
   echo "<td>" . $row['subj_fio_prepod'] . "</td>";
 
