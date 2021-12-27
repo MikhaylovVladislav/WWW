@@ -6,7 +6,7 @@
  mysqli_select_db($linkmy, "students") or die("Нет такой таблицы!");
  $zapros="UPDATE zachved SET zv_data='".$_GET['data'].
 "', id_stud='".$_GET['stud']."', id_subj='"
-.$_GET['subj']."', zv_grade='".$_GET['grade'].
+.$_GET['subj']."', zv_grade='".$_GET['grade']."', zv_npp='".$_GET['npp'].
 "' WHERE id_zachved=".$_GET['id'];
  mysqli_query($linkmy, $zapros);
  if (mysqli_affected_rows($linkmy)>0) {
