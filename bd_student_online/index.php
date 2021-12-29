@@ -203,7 +203,7 @@ while ($row=mysqli_fetch_array($result)){// для каждой строки и�
  echo "<td>" . $row['id'] . "</td>";
  echo "<td>" . $row['login'] . "</td>";
    echo "<td>" . $row['type'] . "</td>";
- echo "<td><a href='edit_user.php?id=" . $row['id']
+ echo "<td><a href='edit_users.php?id=" . $row['id']
 . "'>Редактировать</a></td>"; // запуск скрипта для редактирования
  echo "<td><a href='delete_user.php?id=" . $row['id']
 . "'>Удалить</a></td>"; // запуск скрипта для удаления записи

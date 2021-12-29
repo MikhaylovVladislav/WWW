@@ -8,7 +8,7 @@
 <body>
 
 <?php
-require "isUser.php";
+require "isAdmin.php";
 $title="Форма регистрации"; // название формы
 require "Autorization/db.php"; // подключаем файл для соединения с БД
 require "connectToDB.php";
