@@ -148,7 +148,7 @@ $html = '<hr />
 // output the HTML content
 $pdf->writeHTML($html, true, false, true, false, '');
 
-
+ob_end_clean();
 // close and output PDF document
 $pdf->Output('zachetved.pdf', 'I');
 
