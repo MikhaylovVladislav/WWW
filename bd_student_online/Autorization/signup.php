@@ -85,7 +85,7 @@ $data['type']=(int) $data['type'];
 			<button class="btn btn-success" name="do_signup" type="submit">Зарегистрировать</button>
 		</form>
 		<br>
-		<p>Вернуться на <a href="/public_html/index.php">главную</a>.</p>
+		<p>Вернуться на <a href="/index.php">главную</a>.</p>
 			</div>
 		</div>
 	</div>
