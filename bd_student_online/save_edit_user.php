@@ -2,12 +2,13 @@
 <?php
 session_start();
 require "Autorization/rb.php";
-   
+require "connectToDB.php";
+
  $isUnique=true;
-   $linkmy=mysqli_connect("localhost","root","") or die ("Невозможно
-подключиться к серверу");
+
+
  mysqli_query($linkmy, 'SET NAMES utf8');
- mysqli_select_db($linkmy, "students") or die("Нет такой таблицы!");
+
    
    $result=mysqli_query($linkmy, "SELECT *
 FROM users WHERE id <>". $_GET['id']); // запрос на выборку сведений о пользователях

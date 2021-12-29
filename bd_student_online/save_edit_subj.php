@@ -2,10 +2,10 @@
 <html> <body>
 <?php
 require "isUser.php";
- $linkmy=mysqli_connect("localhost","root","") or die ("Невозможно
-подключиться к серверу");
+require "connectToDB.php";
+
  mysqli_query($linkmy, 'SET NAMES utf8');
- mysqli_select_db($linkmy, "students") or die("Нет такой таблицы!");
+
  $zapros="UPDATE subject SET subj_name='".$_GET['name'].
 "', subj_fio_prepod='".$_GET['fio_prepod']."' WHERE id_subj="
 .$_GET['id'];

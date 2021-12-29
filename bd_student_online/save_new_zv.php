@@ -1,9 +1,10 @@
 <?php
+require "isUser.php";
+require "connectToDB.php";
  // Подключение к базе данных:
- $linkmy=mysqli_connect("localhost","root","") or die ("Невозможно
-подключиться к серверу");
+
  mysqli_query($linkmy, 'SET NAMES utf8'); // Тип кодировки
- mysqli_select_db($linkmy, "students") or die("Нет такой таблицы!");
+
  // Строка запроса на добавление записи в таблицу:
  $sql_add = "INSERT INTO zachved SET zv_data='" . $_GET['data']
 ."', id_stud='".$_GET['stud']."', id_subj='"

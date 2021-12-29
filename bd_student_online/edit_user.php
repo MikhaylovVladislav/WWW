@@ -11,13 +11,10 @@
 require "isAdmin.php";
 $title="Форма регистрации"; // название формы
 require "Autorization/db.php"; // подключаем файл для соединения с БД
+require "connectToDB.php";
 
-
-
- $linkmy=mysqli_connect("localhost","root") or die ("Невозможно
-подключиться к серверу");
  mysqli_query($linkmy, 'SET NAMES utf8');
- mysqli_select_db($linkmy, "students") or die("Нет такой таблицы!");
+ 
  $rows=mysqli_query($linkmy, "SELECT * FROM users WHERE 
 id=".$_GET['id']);
 

@@ -10,11 +10,12 @@
 <?php
 
 require "isUser.php";
+require "connectToDB.php";
+
 //mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
- $linkmy=mysqli_connect("localhost","root") or die ("Невозможно
-подключиться к серверу");
+ 
  mysqli_query($linkmy, 'SET NAMES utf8');
- mysqli_select_db($linkmy, "students") or die("Нет такой таблицы!");
+
  $rows=mysqli_query($linkmy, "SELECT id_subj, subj_name, subj_fio_prepod FROM subject WHERE 
 id_subj=".$_GET['id']);
 

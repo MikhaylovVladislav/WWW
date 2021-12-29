@@ -1,9 +1,10 @@
 <html> <body>
 <?php
- $linkmy=mysqli_connect("localhost","root","") or die ("Невозможно
-подключиться к серверу");
+require "isUser.php";
+require "connectToDB.php";
+
  mysqli_query($linkmy, 'SET NAMES utf8');
- mysqli_select_db($linkmy, "students") or die("Нет такой таблицы!");
+
  $zapros="UPDATE zachved SET zv_data='".$_GET['data'].
 "', id_stud='".$_GET['stud']."', id_subj='"
 .$_GET['subj']."', zv_grade='".$_GET['grade']."', zv_npp='".$_GET['npp'].
