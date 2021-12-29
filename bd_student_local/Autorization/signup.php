@@ -89,3 +89,9 @@ $data['type']=(int) $data['type'];
 			</div>
 		</div>
 	</div>
+<?php
+session_start();
+if(isset($_SESSION['logged_user']) ) {
+	echo '<p>Вернуться к  <a href="/www/bd_student_local/index.php"> таблицам </a>.</p>';
+}
+?>
