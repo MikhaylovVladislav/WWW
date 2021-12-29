@@ -82,11 +82,10 @@ print("<P>Всего студентов: $num_rows </p>");
 <?php
 session_start();
 if(isset($_SESSION['logged_user']) ) {
- $linkmy=mysqli_connect("localhost", "root") or die ("Невозможно
-подключиться к серверу"); // установление соединения с сервером
+
  mysqli_query($linkmy, 'SET NAMES utf8'); // тип кодировки
  // подключение к базе данных:
- mysqli_select_db($linkmy, "students") or die("Нет такой таблицы!");
+ 
  $result=mysqli_query($linkmy, "SELECT id_subj, subj_name ,subj_fio_prepod
 FROM subject"); // запрос на выборку сведений о пользователях
 while ($row=mysqli_fetch_array($result)){// для каждой строки из запроса
@@ -130,11 +129,10 @@ print("<P>Всего предметов: $num_rows </p>");
 <?php
 session_start();
 if(isset($_SESSION['logged_user']) ) {
- $linkmy=mysqli_connect("localhost", "root") or die ("Невозможно
-подключиться к серверу"); // установление соединения с сервером
+
  mysqli_query($linkmy, 'SET NAMES utf8'); // тип кодировки
  // подключение к базе данных:
- mysqli_select_db($linkmy, "students") or die("Нет такой таблицы!");
+
  $result=mysqli_query($linkmy, "SELECT id_zachved, zv_data ,id_stud, id_subj, zv_grade, zv_npp
 FROM zachved"); // запрос на выборку сведений о пользователях
 while ($row=mysqli_fetch_array($result)){// для каждой строки из запроса

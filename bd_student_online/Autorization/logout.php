@@ -6,6 +6,6 @@ require "db.php"; // подключаем файл для соединения �
 unset($_SESSION['logged_user']);
 
 // Редирект на главную страницу
-header('Location: /www/bd_student_local/Autorization/login.php');
+header('Location: /public_html/bd_student_online/Autorization/login.php');
 
 ?>

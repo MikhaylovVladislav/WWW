@@ -19,7 +19,7 @@ if(isset($data['do_login'])) {
     $_SESSION['id'] = $user['id'];
     $_SESSION['login'] = $user['login'];
  		// Редирект на главную страницу
-                header('Location: /www/bd_student_local/index.php');
+                header('Location: /public_html/bd_student_local/index.php');
  	} else {
     $errors[] = 'Пароль введен неверно!';
  	}

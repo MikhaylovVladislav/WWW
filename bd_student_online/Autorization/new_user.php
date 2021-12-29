@@ -62,7 +62,7 @@ $data['type']=(int) $data['type'];
 				// Сохраняем таблицу
 				R::store($user);
 
-        echo '<div style="color: green; "> Регистрация успешна! Можно <a href="/www/bd_student_online/index.php">Вернуться на главну</a>.</div><hr>';
+        echo '<div style="color: green; "> Регистрация успешна! Можно <a href="/public_html/bd_student_online/index.php">Вернуться на главну</a>.</div><hr>';
 
 	} else {
                 // array_shift() извлекает первое значение массива array и возвращает его, сокращая размер array на один элемент.
@@ -85,7 +85,7 @@ $data['type']=(int) $data['type'];
 			<button class="btn btn-success" name="do_signup" type="submit">Зарегистрировать</button>
 		</form>
 		<br>
-		<p>Вернуться на <a href="/www/bd_student_online/index.php">главную</a>.</p>
+		<p>Вернуться на <a href="/public_html/bd_student_online/index.php">главную</a>.</p>
 			</div>
 		</div>
 	</div>
