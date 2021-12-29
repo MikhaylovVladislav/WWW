@@ -88,16 +88,14 @@ echo($d);
 		 <br>
 	 </ul>
 	 
-	  <p> Ссылки на cтраницы (4 л.р.):
+	  <p> Ссылки на cтраницы (5 л.р.):
  
      <ul class = "menu">
          <il> <a href="bd_user/index.php"> Упражнение (bd_user) </a> </il>
 		 <br>
-		 <il> <a href="bd_student/index.php"> Задача по 1 варианту (bd_student)  </a> </il>
+		 <il> <a href="bd_student_local/Autorization/login.php"> Авторизоваться  (bd_student_local) - для локального сервера </a> </il>
 		 <br>
-		 <il> <a href="bd_student_local/Autorization/login.php"> login по 1 варианту (bd_student_local)  </a> </il>
-		 <br>
-		 <il> <a href="bd_student_local/Autorization/signup.php"> sign по 1 варианту (bd_student_local)  </a> </il>
+<il> <a href="bd_student/Autorization/login.php"> Авторизоваться (bd_student) - для SprintHost  </a> </il>
 		 <br>
          
 	 </ul>
