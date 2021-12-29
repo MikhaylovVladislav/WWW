@@ -1,4 +1,5 @@
 <?php
+require "isUser.php";
  // Подключение к базе данных:
  $linkmy=mysqli_connect("localhost","root","") or die ("Невозможно
 подключиться к серверу");
