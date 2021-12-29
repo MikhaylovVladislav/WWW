@@ -196,12 +196,8 @@ echo "<tr>" ;
 
 if(isset($_SESSION['logged_user']) ) {
 	 
-	
- $linkmy=mysqli_connect("localhost", "root") or die ("Невозможно
-подключиться к серверу"); // установление соединения с сервером
  mysqli_query($linkmy, 'SET NAMES utf8'); // тип кодировки
  // подключение к базе данных:
- mysqli_select_db($linkmy, "students") or die("Нет такой таблицы!");
  $result=mysqli_query($linkmy, "SELECT *
 FROM users"); // запрос на выборку сведений о пользователях
 while ($row=mysqli_fetch_array($result)){// для каждой строки из запроса
@@ -224,7 +220,7 @@ for ($a=0;$a<$num_rows;$a++){
 
 print("<P>Всего пользователей: $num_rows </p>");
 }
-echo "<p> <a href='new_user.html'> Добавить пользователя </a>";
+echo "<p> <a href='autoriztion/new_user.php'> Добавить пользователя </a>";
 echo "</fieldset>";
 }
 ?>
