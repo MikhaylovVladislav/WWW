@@ -49,3 +49,4 @@ if(!empty($errors)) {
 			</div>
 		</div>
 	</div>
+<p> <a href="signup.php"> Нет аккаунта </a>
