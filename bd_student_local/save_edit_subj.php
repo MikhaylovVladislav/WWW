@@ -1,5 +1,7 @@
+
 <html> <body>
 <?php
+require "isUser.php";
  $linkmy=mysqli_connect("localhost","root","") or die ("Невозможно
 подключиться к серверу");
  mysqli_query($linkmy, 'SET NAMES utf8');

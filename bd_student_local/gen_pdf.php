@@ -1,4 +1,7 @@
+
 <?php
+
+
 //============================================================+
 // File name   : example_011.php
 // Begin       : 2008-03-04
@@ -27,6 +30,7 @@
 // Include the main TCPDF library (search for installation path).
 //require_once('tcpdf_include.php');
 require_once 'tcpdf/tcpdf.php'; // Подключаем библиотеку
+require "isUser.php";
 
 // extend TCPF with custom functions
 class MYPDF extends TCPDF {

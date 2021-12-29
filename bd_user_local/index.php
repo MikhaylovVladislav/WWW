@@ -1,3 +1,8 @@
+<?php
+session_start();
+?>
+
+
 <html>
 <head> <title> Сведения о прользователях сайта </title> </head>
 <body>

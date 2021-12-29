@@ -1,3 +1,4 @@
+
 <?php
 /**
  * PHPExcel
@@ -24,6 +25,8 @@
  * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt	LGPL
  * @version    ##VERSION##, ##DATE##
  */
+require "isUser.php";
+
 
 /** Error reporting */
 error_reporting(E_ALL);

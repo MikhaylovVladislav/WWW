@@ -1,3 +1,5 @@
+
+
 <html>
 <head> <title> Сведения о прользователях сайта </title>
 <style>
@@ -25,7 +27,9 @@ legend {
  <th> Редактировать </th> <th> Уничтожить </th> </tr>
 
 <?php
-
+require "isUser.php";
+session_start();
+if(isset($_SESSION['logged_user']) ) {
 $filed="datareg.txt";
  $linkmy=mysqli_connect("localhost", "root") or die ("Невозможно
 подключиться к серверу"); // установление соединения с сервером
@@ -44,8 +48,10 @@ while ($row=mysqli_fetch_array($result)){// для каждой строки и�
   echo "<td>" . $row['stud_no_tel'] . "</td>";
  echo "<td><a href='edit.php?id=" . $row['id_stud']
 . "'>Редактировать</a></td>"; // запуск скрипта для редактирования
- echo "<td><a href='delete.php?id=" . $row['id_stud']
+ if($_SESSION['status'] == 2) { echo "<td><a href='delete.php?id=" . $row['id_stud']
 . "'>Удалить</a></td>"; // запуск скрипта для удаления записи
+ }else { echo "<td>Недоступно</td>"; 
+ }
  echo "</tr>";
  
   // Для записи
@@ -58,7 +64,7 @@ while ($row=mysqli_fetch_array($result)){// для каждой строки и�
 print "</table>";
 $num_rows = mysqli_num_rows($result); // число записей в таблице БД
 print("<P>Всего студентов: $num_rows </p>");
- 
+}
 ?>
 
 <p> <a href="new.html"> Добавить студента </a>
@@ -72,7 +78,8 @@ print("<P>Всего студентов: $num_rows </p>");
  <th> Редактировать </th> <th> Уничтожить </th> </tr>
 
 <?php
-
+session_start();
+if(isset($_SESSION['logged_user']) ) {
  $linkmy=mysqli_connect("localhost", "root") or die ("Невозможно
 подключиться к серверу"); // установление соединения с сервером
  mysqli_query($linkmy, 'SET NAMES utf8'); // тип кодировки
@@ -88,8 +95,11 @@ while ($row=mysqli_fetch_array($result)){// для каждой строки и�
 
  echo "<td><a href='edit_subj.php?id=" . $row['id_subj']
 . "'>Редактировать</a></td>"; // запуск скрипта для редактирования
- echo "<td><a href='delete_subj.php?id=" . $row['id_subj']
+if($_SESSION['status'] == 2) { echo "<td><a href='delete_subj.php?id=" . $row['id_subj']
 . "'>Удалить</a></td>"; // запуск скрипта для удаления записи
+} else { echo "<td>Недоступно</td>";
+
+}
  echo "</tr>";
  
  // Для записи
@@ -102,7 +112,7 @@ print("<P>Всего предметов: $num_rows </p>");
  
  
   
- 
+}
 ?>
 
 <p> <a href="new_subj.html"> Добавить предмет </a>
@@ -116,7 +126,8 @@ print("<P>Всего предметов: $num_rows </p>");
  <th> Редактировать </th> <th> Уничтожить </th> </tr>
 
 <?php
-
+session_start();
+if(isset($_SESSION['logged_user']) ) {
  $linkmy=mysqli_connect("localhost", "root") or die ("Невозможно
 подключиться к серверу"); // установление соединения с сервером
  mysqli_query($linkmy, 'SET NAMES utf8'); // тип кодировки
@@ -134,8 +145,10 @@ while ($row=mysqli_fetch_array($result)){// для каждой строки и�
 
  echo "<td><a href='edit_zv.php?id=" . $row['id_zachved']
 . "'>Редактировать</a></td>"; // запуск скрипта для редактирования
- echo "<td><a href='delete_zv.php?id=" . $row['id_zachved']
+ if($_SESSION['status'] == 2) { echo "<td><a href='delete_zv.php?id=" . $row['id_zachved']
 . "'>Удалить</a></td>"; // запуск скрипта для удаления записи
+ }else { echo "<td>Недоступно</td>"; 
+ }
  echo "</tr>";
  
  $stnum=$row['id_stud'];
@@ -155,16 +168,87 @@ for ($a=0;$a<$num_rows;$a++){
 file_put_contents($filed, $rezcom);
 
 print("<P>Всего предметов: $num_rows </p>");
- 
+}
 ?>
 
 <p> <a href="new_zv.html"> Добавить ведомость </a>
 </fieldset>
+
 
 <fieldset>
 <legend> Экспорт таблиц </legend>
 <p> <a href="gen_pdf.php"> Генерация ПДФ (TCPDF) </a>
 <p> <a href="gen_xls.php"> Генерация Excel (xls) </a>
 </fieldset>
+
+
+<?php
+session_start();
+if($_SESSION['status'] == 2) {
+ echo "<fieldset>";
+echo "<legend> Админ панель </legend>";
+echo "<table border='1'>";
+echo "<tr>" ;
+ echo "<th> Ид </th> <th> Логин </th> <th> Тип доступа </th> <th> Редактировать </th> <th> Уничтожить </th> </tr>";
+
+
+if(isset($_SESSION['logged_user']) ) {
+	 
+	
+ $linkmy=mysqli_connect("localhost", "root") or die ("Невозможно
+подключиться к серверу"); // установление соединения с сервером
+ mysqli_query($linkmy, 'SET NAMES utf8'); // тип кодировки
+ // подключение к базе данных:
+ mysqli_select_db($linkmy, "students") or die("Нет такой таблицы!");
+ $result=mysqli_query($linkmy, "SELECT *
+FROM users"); // запрос на выборку сведений о пользователях
+while ($row=mysqli_fetch_array($result)){// для каждой строки из запроса
+ echo "<tr>";
+ echo "<td>" . $row['id'] . "</td>";
+ echo "<td>" . $row['login'] . "</td>";
+   echo "<td>" . $row['type'] . "</td>";
+ echo "<td><a href='edit_user.php?id=" . $row['id']
+. "'>Редактировать</a></td>"; // запуск скрипта для редактирования
+ echo "<td><a href='delete_user.php?id=" . $row['id']
+. "'>Удалить</a></td>"; // запуск скрипта для удаления записи
+ echo "</tr>";
+ 
+}
+print "</table>";
+$num_rows = mysqli_num_rows($result); // число записей в таблице БД
+for ($a=0;$a<$num_rows;$a++){
+
+}
+
+print("<P>Всего пользователей: $num_rows </p>");
+}
+echo "<p> <a href='new_user.html'> Добавить пользователя </a>";
+echo "</fieldset>";
+}
+?>
+
+
+
+<fieldset>
+<legend> Профиль </legend>
+
+   <?php
+    require "Autorization/rb.php";
+   $id=$_SESSION['id'];
+    echo "<td><a href='edit_user.php?id=" . $id  . "'>Редактировать свои данные</a></td>";
+	?>
+   
+
+  <p> <a href="Autorization/logout.php">Выйти</a>
+</fieldset>
+
+
 </fieldset>
 </body> </html>
+ 
+
+ 
+
+
+ 
+

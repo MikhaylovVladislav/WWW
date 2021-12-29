@@ -1,3 +1,5 @@
+
+
 <html>
 <head>
 <title> Редактирование данных о студенте </title>
@@ -6,6 +8,8 @@
 <body>
 
 <?php
+
+require "isUser.php";
 //mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
  $linkmy=mysqli_connect("localhost","root") or die ("Невозможно
 подключиться к серверу");

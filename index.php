@@ -95,5 +95,9 @@ echo($d);
 		 <br>
 		 <il> <a href="bd_student/index.php"> Задача по 1 варианту (bd_student)  </a> </il>
 		 <br>
+		 <il> <a href="bd_student_local/Autorization/login.php"> login по 1 варианту (bd_student_local)  </a> </il>
+		 <br>
+		 <il> <a href="bd_student_local/Autorization/signup.php"> sign по 1 варианту (bd_student_local)  </a> </il>
+		 <br>
          
 	 </ul>
