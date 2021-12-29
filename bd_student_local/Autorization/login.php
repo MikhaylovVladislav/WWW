@@ -50,3 +50,4 @@ if(!empty($errors)) {
 		</div>
 	</div>
 <p> <a href="signup.php"> Нет аккаунта </a>
+<p> <a href="index.php"> На главную </a>

@@ -222,7 +222,7 @@ for ($a=0;$a<$num_rows;$a++){
 
 print("<P>Всего пользователей: $num_rows </p>");
 }
-echo "<p> <a href='new_user.html'> Добавить пользователя </a>";
+echo "<p> <a href='autorization/new_user.php'> Добавить пользователя </a>";
 echo "</fieldset>";
 }
 ?>
