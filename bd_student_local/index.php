@@ -21,6 +21,9 @@ legend {
 <fieldset class ="com">
 <fieldset>
 <legend> Студенты </legend>
+
+
+
 <table border="1">
 <tr> 
  <th> id </th> <th> ФИО </th> <th> Факультет </th> <th> Группа </th> <th> Номер зачетной книжки </th> <th> Номер телефона </th>
@@ -60,6 +63,10 @@ while ($row=mysqli_fetch_array($result)){// для каждой строки и�
  
 
 }
+
+
+
+
 
 print "</table>";
 $num_rows = mysqli_num_rows($result); // число записей в таблице БД
@@ -244,6 +251,8 @@ echo "</fieldset>";
 
 
 </fieldset>
+
+
 </body> </html>
  
 
