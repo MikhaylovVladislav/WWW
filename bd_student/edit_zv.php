@@ -27,12 +27,38 @@ id_zachved=".$_GET['id']);
   $npp = $st['zv_npp'];
  }
 print "<form action='save_edit_zv.php' metod='get'>";
-print "Дата: <input name='data' size='20' type='text'
+print "Дата: <input name='data' size='20' type='date'
 value='".$data."'>";
-print "<br>Ид студента: <input name='stud' size='20' type='text'
-value='".$stud."'>";
-print "<br>Ид предмета: <input name='subj' size='20' type='text'
-value='".$subj."'>";
+
+$result=mysqli_query($linkmy, "SELECT id_stud, stud_fio, stud_faculty, stud_gr, stud_no_zk, stud_no_tel
+FROM stud "); // запрос на выборку сведений о пользователях
+echo "<br>";
+echo "  Ид студента: <select name='id_stud'>";
+
+		while ($row = mysqli_fetch_array($result)) {
+			if ($stud==$row['id_stud']){
+		    print "<p> <option selected value='" . $row['id_stud'] ."'>" . $row['stud_fio'] ."</option>";
+		}else{
+			    print "<p> <option value='" . $row['id_stud'] ."'>" . $row['stud_fio'] ."</option>";
+		}
+		}
+		echo "</select>";
+
+
+
+ $result=mysqli_query($linkmy, "SELECT * FROM subject"); // запрос на выборку сведений о пользователях
+echo "<br>";
+echo "  Ид студента: <select name='id_subj'>";
+		while ($row = mysqli_fetch_array($result)) {
+			if ($subj==$row['id_subj']){
+		    print "<p> <option selected value='" . $row['id_subj'] ."'>" . $row['subj_name'] ."</option>";
+		}else{
+			    print "<p> <option value='" . $row['id_subj'] ."'>" . $row['subj_name'] ."</option>";	
+		}
+		}
+		echo "</select>";
+
+
 print "<br>Оценка: <input name='grade' size='5' type='text' min='2' max='5'
 value='".$grade."'>";
 print "<br>НПП: <input name='npp' size='5' type='number' min='1' max='10'
