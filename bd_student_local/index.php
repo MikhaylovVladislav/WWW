@@ -178,7 +178,7 @@ print("<P>Всего предметов: $num_rows </p>");
 }
 ?>
 
-<p> <a href="new_zv.html"> Добавить ведомость </a>
+<p> <a href="new_zv.php"> Добавить ведомость </a>
 </fieldset>
 
 

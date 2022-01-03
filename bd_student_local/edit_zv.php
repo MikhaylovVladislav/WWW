@@ -13,13 +13,6 @@ require "isUser.php";
  $linkmy=mysqli_connect("localhost","root") or die ("Невозможно
 подключиться к серверу");
  mysqli_query($linkmy, 'SET NAMES utf8');
- 
-  
- 
- 
- 
- 
- 
  mysqli_select_db($linkmy, "students") or die("Нет такой таблицы!");
  $rows=mysqli_query($linkmy, "SELECT id_zachved, zv_data, id_stud, id_subj, zv_grade, zv_npp FROM zachved WHERE 
 id_zachved=".$_GET['id']);
@@ -74,16 +67,7 @@ print "</form>";
 print "<p><a href=\"index.php\"> Вернуться к списку
 таблиц </a>";
 
-
-
-
- mysqli_query($linkmy, 'SET NAMES utf8'); // тип кодировки
- // подключение к базе данных:
- 
-
-
-
-		
+	
 
 ?>
 
