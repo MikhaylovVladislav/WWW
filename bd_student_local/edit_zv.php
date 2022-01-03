@@ -26,7 +26,7 @@ id_zachved=".$_GET['id']);
  $npp = $st['zv_npp'];
  }
 print "<form action='save_edit_zv.php' metod='get'>";
-print "Дата: <input name='data' size='20' type='text'
+print "Дата: <input name='data' size='20' type='date'
 value='".$data."'>";
 print "<br>Ид студента: <input name='stud' size='20' type='text'
 value='".$stud."'>";
