@@ -7,8 +7,8 @@ require "connectToDB.php";
 
  // Строка запроса на добавление записи в таблицу:
  $sql_add = "INSERT INTO zachved SET zv_data='" . $_GET['data']
-."', id_stud='".$_GET['stud']."', id_subj='"
-.$_GET['subj']."', zv_grade='".$_GET['grade'].
+."', id_stud='".$_GET['id_stud']."', id_subj='"
+.$_GET['id_subj']."', zv_grade='".$_GET['grade'].
 "'";
  mysqli_query($linkmy, $sql_add); // Выполнение запроса
  if (mysqli_affected_rows($linkmy)>0) // если нет ошибок при выполнении запроса

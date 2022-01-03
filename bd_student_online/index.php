@@ -133,7 +133,7 @@ if(isset($_SESSION['logged_user']) ) {
  mysqli_query($linkmy, 'SET NAMES utf8'); // тип кодировки
  // подключение к базе данных:
 
- $result=mysqli_query($linkmy, "SELECT id_zachved, zv_data ,id_stud, id_subj, zv_grade, zv_npp
+ $result=mysqli_query($linkmy, "SELECT id_zachved, DATE_FORMAT(zv_data, '%d.%m.%Y') as zv_data ,id_stud, id_subj, zv_grade, zv_npp
 FROM zachved"); // запрос на выборку сведений о пользователях
 while ($row=mysqli_fetch_array($result)){// для каждой строки из запроса
  echo "<tr>";
@@ -171,7 +171,7 @@ print("<P>Всего предметов: $num_rows </p>");
 }
 ?>
 
-<p> <a href="new_zv.html"> Добавить ведомость </a>
+<p> <a href="new_zv.php"> Добавить ведомость </a>
 </fieldset>
 
 
