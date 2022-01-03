@@ -102,7 +102,7 @@ echo($d);
      <ul class = "menu">
 		 <il> <a href="bd_student_local/Autorization/login.php"> Авторизоваться  (bd_student_local) - для локального сервера </a> </il>
 		 <br>
-<il> <a href="bd_student_online/Autorization/login.php"> Авторизоваться (bd_student) - для SprintHost  </a> </il>
+<il> <a href="bd_student_online/Autorization/login.php"> Авторизоваться (bd_student_online) - для SprintHost  </a> </il>
 		 <br>
          
 	 </ul>
