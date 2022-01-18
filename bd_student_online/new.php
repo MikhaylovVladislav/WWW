@@ -1,3 +1,7 @@
+<?php
+require "isUser.php";
+require "connectToDB.php";
+?>
 <html>
 <head> <title> Добавление нового студента </title> 
  <meta charset="utf-8">

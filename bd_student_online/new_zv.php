@@ -7,6 +7,8 @@
 <form action="save_new_zv.php" metod="get">
  Дата: <input name="data" size="20" type="date" required >
  <?php
+ require "isUser.php";
+require "connectToDB.php";
 $result=mysqli_query($linkmy, "SELECT id_stud, stud_fio, stud_faculty, stud_gr, stud_no_zk, stud_no_tel
 FROM stud "); // запрос на выборку сведений о пользователях
 echo "<br>";

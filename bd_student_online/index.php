@@ -69,7 +69,7 @@ print("<P>Всего студентов: $num_rows </p>");
 }
 ?>
 
-<p> <a href="new.html"> Добавить студента </a>
+<p> <a href="new.php"> Добавить студента </a>
 </fieldset>
 
 <fieldset>
@@ -116,7 +116,7 @@ print("<P>Всего предметов: $num_rows </p>");
 }
 ?>
 
-<p> <a href="new_subj.html"> Добавить предмет </a>
+<p> <a href="new_subj.php"> Добавить предмет </a>
 </fieldset>
 
 <fieldset>
